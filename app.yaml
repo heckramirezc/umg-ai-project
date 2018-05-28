@@ -1,0 +1,31 @@
+runtime: php55
+api_version: 1
+threadsafe: false
+
+handlers:
+- url: /user_guide
+  static_dir: app/user_guide
+
+- url: /assets/js/*
+  static_dir: app/assets/js
+
+- url: /assets/css/*
+  static_dir: app/assets/css
+
+- url: /assets/img/*
+  static_dir: app/assets/img
+
+- url: /assets/fonts/*
+  static_dir: app/assets/fonts
+
+- url: /
+  script: app/index.php
+
+- url: /index.php/welcome
+  script: app/index.php/welcome
+
+- url: /conversation
+  script: app/index.php/welcome/conversation
+
+- url: /(.+)
+  script: app/index.php
